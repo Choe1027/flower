@@ -1,15 +1,27 @@
 //app.js
+var requestUtils = require('./utils/request.js');
 App({
+  data:{
+    interval:null
+  },
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        requestUtils.doPost(this.globalData.baseUrl,101,'{"code":"'+res.code+'"}',
+        function success(res){
+            console.log(res.data.info);
+            if(res.data.state == 1){
+             getApp().globalData.openid = res.data.info.openid
+             getApp().globalData.isNeedLogin = res.data.info.isNeedLogin
+            }else{//服务器异常
+             console.log("服务器异常:")
+             console.log(res.data)
+            }
+        },
+        function fail(res){
+         
+        })
       }
     })
     // 获取用户信息
@@ -33,7 +45,33 @@ App({
       }
     })
   },
+  onShow:function(){
+    var that = this;
+    var interval = setInterval(function () {
+      requestUtils.doPost(that.globalData.baseUrl,104,'',function(res){
+          console.log(res.data.info);
+      },function(res){
+
+      });
+    }, that.globalData.intervalTime);
+    this.globalData.interval = interval;
+  },
+  onHide:function(){
+    clearInterval(this.data.interval);
+    this.globalData.interval = null;
+  },
+  onError:function(){
+
+  },
+  onPageNotFound:function(){
+
+  },
   globalData: {
-    userInfo: null
+    intervalTime:1000*60,
+    interval:null,
+    userInfo: null,
+    openid:null,
+    isNeedLogin:0, // 0表示需要登陆，1表示不需要登陆
+    baseUrl : "http://www.localhost:8888/api?"
   }
 })
