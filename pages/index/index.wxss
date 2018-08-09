@@ -28,6 +28,45 @@
 .entrance_child_container_column{
   height: 50%;
 }
+.section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+.title {
+  width: 20%;
+  height: 100%;
+  font-size: 17px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  color: #014D2F;
+}
+.title_en{
+  width: 20%;
+  height: 100%;
+  font-size: 13px;
+  color: #808080;
+  display: flex;
+  align-items: center;
+}
+.title_num {
+  font-size: 12px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  text-align: right;
+}
+.num_green {
+  color: #014D2F;
+}
+.num_grey {
+  color: #808080
+}
+
 
 
 

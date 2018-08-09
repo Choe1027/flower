@@ -30,8 +30,17 @@
           </view>
       </view>
     </view>
+    
     <!-- 抢购 -->
+    <view class='section'>
+      <view class='title'>限时秒杀</view>
+      <view class='title_en'> /  Flash Sale</view>
+      <view class='title_num'>
+       <view class='num_green'>1</view>/<view class='num_grey'>4</view>
+      </view>
+    </view>
   </view> 
+  <view style='background:#ff0000;height:1px'></view>
 </scroll-view>
 
 
