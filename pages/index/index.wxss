@@ -1,1 +1,41 @@
-/**index.wxss**/
+
+.swiper {
+  width: 100%;
+  height: 200px;
+}
+.slide-image {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+}
+.flex_row{
+  display: flex;
+  flex-direction: row;
+}
+.flex_column{
+  display: flex;
+  flex-direction: column;
+}
+.entrance_container {
+  margin-top: 30px;
+  width: 100%;
+  height: 200px;
+}
+.entrance_child_container_row{
+  width: 50%;
+}
+.entrance_child_container_column{
+  height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+

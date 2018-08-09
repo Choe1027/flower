@@ -1,9 +1,89 @@
 <!--index.wxml-->
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
+<scroll-view scroll-y="true" enable-back-to-top="true">
+  <view >
+    <!-- 轮播页 -->
+    <view>
+      <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}"  
+      interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item.url}}" class='slide-image'/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- 入口 -->
+    <view class='entrance_container flex_row'>
+      <view class='entrance_child_container_row flex_column'>
+        <view style='background:#ff0000;width:100%;height:60%'>aaaa</view>
+        <view style='background:#ffff00;width:100%;height:40%'>aaaa</view>
+      </view>
+      <view class='entrance_child_container_row flex_column'>
+          <view class='entrance_child_container_column flex_row' >
+            <view class='entrance_child_container_row' style='background:#0000ff;'>xxx</view>
+            <view class='entrance_child_container_row' style='background:#000;'>aaa</view>
+          </view>
+          <view class='entrance_child_container_column flex_row' >
+            <view class='entrance_child_container_row' style='background:#00f0ff;'>xxx</view>
+            <view class='entrance_child_container_row' style='background:#0a0;'>aaa</view>
+          </view>
+      </view>
+    </view>
+    <!-- 抢购 -->
+  </view> 
+</scroll-view>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <view class="bc_grey"></view>  -->
+  <!-- 入口 -->
+  <!-- <view class="box entrance_container_height"> 
+    <view class="entrance">
+      <image class="entrance_icon" src="../../images/home.png"></image>  
+      <view class="entrance_text">预购</view>
+    </view>
+    <view class="entrance">
+      <image class="entrance_icon" src="../../images/home.png"></image>  
+      <view class="entrance_text">竞拍</view>
+    </view>
+    <view class="entrance">
+      <image class="entrance_icon" src="../../images/home.png"></image>  
+      <view class="entrance_text">套餐</view>
+    </view>
+    <view class="entrance">
+      <image class="entrance_icon" src="../../images/home.png"></image>  
+      <view class="entrance_text">课程</view>
+    </view>
+    <view class="entrance">
+      <image class="entrance_icon" src="../../images/home.png"></image>  
+      <view class="entrance_text">花器</view>
+    </view> -->
+    <!-- 限时抢购标头 -->
+    <!-- <view class="title_container">
+      <view class="title" style='width:85%'>限时抢购</view>
+      <view class="title" style='width:15%'>更多></view>
+    </view>
+    <view class="divide_line"></view> -->
+    <!-- 限时抢购首页展示 -->
+    <!-- <view class="box">
+      <view class="good_item">
+
+      </view>
+    </view> 
+  </view>-->
+
