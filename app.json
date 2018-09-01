@@ -14,7 +14,7 @@
     "backgroundColor": "#fff"
   },
   "tabBar": {
-    "color":"#eeeeee",
+    "color":"#808080",
     "selectedColor": "#014D2F",
     "backgroundColor": "#fff",
     "position": "bottom",
@@ -28,20 +28,20 @@
       {
         "pagePath": "pages/category/category",
         "text": "分类",
-        "iconPath": "images/order.png",
-        "selectedIconPath": "images/order_selected.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine.png"
       },
       {
         "pagePath": "pages/order/order",
         "text": "订单",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_selected.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我",
-        "iconPath": "images/order.png",
-        "selectedIconPath": "images/order_selected.png"
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_selected.png"
       }
     ]
   }

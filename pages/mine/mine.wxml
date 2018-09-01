@@ -1,2 +1,49 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!-- 个人信息背景部分 -->
+<view class='info'>
+  <image class="avatar" src="../../images/temp/头像2@2x.png" mode="cover"></image>
+  <view class='container_column'>
+      <view class='nickname'>奥特曼的小怪兽</view>
+      <view class='container_row grade_container'>
+          <image class='grade_image' src='../../images/会员@2x.png'></image>
+          <view class='grade'>初级花童</view>
+      </view>
+  </view>
+</view>
+<!-- 积分余额部分 -->
+<view class='money_container'>
+  <view class='money_item'>
+    <view class='money_item_value'>1260</view>
+    <view class='money_item_key'>余额</view>
+  </view>
+  <view class='divide_line'></view>
+  <view class='money_item'>
+    <view class='money_item_value'>1</view>
+    <view class='money_item_key'>优惠卷</view>
+  </view>
+  <view class='divide_line'></view>
+  <view class='money_item'>
+    <view class='money_item_value'>33</view>
+    <view class='money_item_key'>花瓣</view>
+  </view>
+</view>
+<!-- 订单 -->
+<view class='order'>
+  <view class='order_title'>我的订单</view>
+  <view class='order_container'>
+      <view class='order_item'>
+          <image class='order_image' src='../../images/待付款@2x.png'></image>
+          <view class='order_desc' >待付款</view>
+      </view>
+      <view class='divide_line'></view>
+      <view class='order_item'>
+         <image class='order_image' src='../../images/待收货@2x.png'></image>
+          <view class='order_desc' >待收货</view>
+      </view>
+      <view class='divide_line'></view>
+      <view class='order_item'>
+          <image class='order_image' src='../../images/全部订单@2x.png'></image>
+          <view class='order_desc'>全部订单</view>
+      </view>
+  </view>
+</view>

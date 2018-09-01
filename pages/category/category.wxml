@@ -1,2 +1,17 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<scroll-view scroll-x="true" class="ip_tab_comtainer">
+  
+ 
+   
+
+     <image class='ip_tab_item_s' src='../../images/temp/新品1@2x.png' ></image>
+    
+  <view class='ip_tab_item_s' style='width:300px; hight:50px;'>
+
+      dddd
+    </view>
+    <view class='ip_tab_item_s' style='width:300px; hight:50px;'>
+
+      ffff
+    </view>
+  
+</scroll-view>
